@@ -1,13 +1,14 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h2>BUG REPORTING [ISSUE]</h2>
-    <p class="description">(Enter following details for issue and then encrypt)</p>
-    <form action="/" method="POST">
-        <p>
-            <span class="textarea">{{form.issue(size=30)}}</span>
-        </p>
-        <button class="encryption_button" type="submit" title="encrypt"><span>Encrypt</span></button>
-    </form>
+{% extends 'base.html' %} {% block content %}
+<h2>BUG REPORTING [ISSUE]</h2>
+<p class="description">(Enter following details for issue and then encrypt)</p>
+<form action="/" method="POST">
+  {{form.team_name()}} {{form.file_name()}}
+  {{form.line_number}}
+  <span style="color: red;">[{{ form.line_number.errors[0] }}]</span>
+  {{form.bug_description}} {{form.solution}}
+  <button class="encryption_button" type="submit" title="encrypt">
+    <span>Encrypt</span>
+  </button>
+</form>
 
 {% endblock %}

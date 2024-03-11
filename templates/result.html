@@ -4,14 +4,14 @@
 
     <h2>ENCRYPTED TEXT</h2>
     <p class="description">(paste this into the GitHub Issue message)</p>
-    <div class="encrypted_output" id="a">
+    <div class="encrypted_output">
         <div class="copied">
             <p>👾 Copied to Clipboard</p>
         </div>
         <div class="copy_to_clipboard" onclick="copyDivToClipboard()">
             <img src="{{url_for('static', filename='img/duplicate.png')}}" />
         </div>
-        <p>{{ output[0] }} <br><br> {{ output[1] }}</p>
+        <p id="a">{{ output[0] }} <br><br> {{ output[1] }}</p>
     </div>
 
     <script>
