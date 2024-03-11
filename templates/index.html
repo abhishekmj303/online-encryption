@@ -4,7 +4,9 @@
 <form action="/" method="POST">
   {{form.team_name()}} {{form.file_name()}}
   {{form.line_number}}
+  <!-- {% for error in form.line_number.errors %} -->
   <span style="color: red;">[{{ form.line_number.errors[0] }}]</span>
+  <!-- {% endfor %} -->
   {{form.bug_description}} {{form.solution}}
   <button class="encryption_button" type="submit" title="encrypt">
     <span>Encrypt</span>
